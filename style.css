@@ -1,0 +1,283 @@
+/*
+ * Stylesheet for the Lel’s Guitar landing page
+ * A neutral palette of blacks, whites and greys is used to create a minimalist,
+ * elegant look. The layout is fully responsive, adjusting for mobile screens.
+ */
+
+:root {
+  --primary-color: #4e4e4e;
+  --accent-color: #333;
+  --background-light: #fafafa;
+  --text-color: #222;
+  --link-color: #4e4e4e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ffffff;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Generic container to constrain width and center content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.6em 0;
+  font-weight: 600;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Hero section with background image */
+#hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Dark overlay to improve contrast for text */
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#hero .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+
+.btn-small {
+  display: inline-block;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-small:hover {
+  background-color: var(--accent-color);
+  color: #ffffff;
+}
+
+.follow-btn {
+  margin-top: 20px;
+}
+
+/* About section */
+#about .about-content {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#about .logo {
+  width: 150px;
+  height: auto;
+}
+
+#about .text {
+  flex: 1;
+  min-width: 250px;
+}
+
+/* Catalog section */
+#catalog .catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background-color: var(--background-light);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.price {
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* Why choose us section */
+#why .reasons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+#why .reasons li::before {
+  content: '✓';
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+
+/* Social media section */
+#social .insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+/* Each Instagram post cell has a fixed height to form a neat grid. */
+#social .insta-grid div {
+  height: 150px;
+}
+
+#social .insta-grid div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Contact section */
+#contact .contact-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#contact .contact-list li {
+  margin-bottom: 10px;
+}
+
+#contact .subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 500px;
+}
+
+#contact .subscribe-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#contact .subscribe-form button {
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#contact .subscribe-form button:hover {
+  background-color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+footer #citations {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+footer a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 2rem;
+  }
+  #hero p {
+    font-size: 1rem;
+  }
+  #about .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  #about .logo {
+    margin-bottom: 20px;
+  }
+}
